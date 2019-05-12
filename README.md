@@ -1,5 +1,4 @@
-## Serverpilot
-
+## Serverpilot  
 Make sure to have the repositories folder in `/srv/users/<user>/apps/repositories`.
 
 Clone this repository into your repositories folder  
@@ -14,8 +13,12 @@ Now we want to add the remote to our local repo to do git push <staging|master>
 All setup, deploy using this command  
 `$ git push <staging|production> <branch>`
 
-Sources
+## Other server  
+...
+
+## Sources
 - https://tinyurl.com/powxkxl
 
-Todos
+## Todos
 - Add option to auto migrate databases when deployed
+- Add support for more servers
