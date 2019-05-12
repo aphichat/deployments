@@ -10,7 +10,7 @@ if [ $1 = "-repository" ] && [ $3 = "-branch" ]; then
     # copy the post-receive file into the repo
     cp ./post-receive/serverpilot $REPOSITORY_PATH/$2.git/hooks/post-receive
     # update the variables of post-receive script
-    sed -i '' -e "s/<branch>/$4/g" -e "s/<repository>/$2/g" -e "s/<whoami>/$(whoami)/g" $REPOSITORY_PATH/$2.git/hooks/post-receive
+    sed -i -e "s/<branch>/$4/g" -e "s/<repository>/$2/g" -e "s/<whoami>/$(whoami)/g" $REPOSITORY_PATH/$2.git/hooks/post-receive
   else
     echo "Error, the --bare repository allready exist."
   fi
