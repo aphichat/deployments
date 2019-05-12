@@ -13,7 +13,7 @@ Now we want to add the remote to our local repo to do git push <staging|master>
 All setup, deploy using this command  
 `$ git push <staging|production> <branch>`
 
-## Other server  
+## Other servers  
 ...
 
 ## Sources
@@ -22,3 +22,6 @@ All setup, deploy using this command
 ## Todos
 - Add option to auto migrate databases when deployed
 - Add support for more servers
+- Add ability to set composer install at the post-receive script
+- Add CMS specifics support
+- Add type of project support (rails, react, angular, etc...)
