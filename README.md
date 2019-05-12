@@ -1,3 +1,9 @@
+# Deployments
+This script will let you setup dutodeployment your repositories by using git's post-receive script.  
+It initiate a --bare repository auto setup the post-receive script into the bare repo.  
+
+Feel free to contribute.
+
 ## Serverpilot  
 Make sure to have the repositories folder in `/srv/users/<user>/apps/repositories`.
 
