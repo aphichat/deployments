@@ -4,6 +4,7 @@ REPOSITORY_PATH="/srv/users/$(whoami)/apps/repositories"
 
 if [ $1 = "-repository" ] && [ $3 = "-branch" ]; then
   if [ ! -d "$REPOSITORY_PATH/$2.git" ]; then
+    echo "REPOSITORY_PATH = $REPOSITORY_PATH"
     # initiate --bare repo
     git init --bare $REPOSITORY_PATH/$2.git
     # copy the post-receive file into the repo
