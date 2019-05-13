@@ -16,7 +16,9 @@ do
 done
 
 # symlink public folder
-ln -s web public
+echo "Symlink public folder..."
+ln -s $WORK_TREE/web $WORK_TREE/public
 
 # install vendors
-composer install
+echo "Install Composer"
+cd $WORK_TREE && composer install
