@@ -14,3 +14,9 @@ do
     echo "Ref $ref received. Doing nothing: only the ${BRANCH} branch may be deployed on this server."
   fi
 done
+
+# symlink public folder
+ln -s web public
+
+# install vendors
+composer install

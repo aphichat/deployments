@@ -4,19 +4,19 @@ It initiate a --bare repository auto setup the post-receive script into the bare
 
 Feel free to contribute.
 
+## Setup  
+Clone this repository into your repositories(where all --bare repos will lives in) folder  
+`$ git clone git@github.com:aphichat/deployments.git`
+
 ## Serverpilot  
-Make sure to have the repositories folder in `/srv/users/<user>/apps/repositories`.
-
-Clone this repository into your repositories folder  
-`$ git clone git@github.com:aphichat/deployments.git /srv/users/<user>/apps/repositories`
-
-Use this command when theres no --bare repo on the staging|production server.  
+Make sure to have the repositories folder in `/srv/users/<user>/apps/repositories`.  
+Add --bare repository with post-receive script.  
 `$ sh serverpilot.sh -repository <repository> -branch <staging|production>`
 
-Now we want to add the remote to our local repo to do git push <staging|master>  
+Add the remote to our local machine repository.  
 `$ git remote add <staging|production> <user>@<host>:/srv/users/<user>/apps/repositories/<repository>.git`
 
-All setup, deploy using this command  
+Deploy using this command  
 `$ git push <staging|production> <branch>`
 
 ## Other servers  
