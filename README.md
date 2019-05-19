@@ -11,7 +11,7 @@ Clone this repository into your repositories(where all --bare repos will lives i
 ## Serverpilot  
 Make sure to have the repositories folder in `/srv/users/<user>/apps/repositories`.  
 Add --bare repository with post-receive script.  
-`$ sh serverpilot.sh -repository <repository> -branch <staging|production>`
+`$ sh serverpilot.sh -repository <repository> -branch <staging|master>`
 
 Add the remote to our local machine repository.  
 `$ git remote add <staging|production> <user>@<host>:/srv/users/<user>/apps/repositories/<repository>.git`
