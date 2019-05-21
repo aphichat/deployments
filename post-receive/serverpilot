@@ -4,6 +4,11 @@ WORK_TREE="/srv/users/<whoami>/apps/<repository>"
 GIT_DIR="/srv/users/<whoami>/apps/repositories/<repository>.git"
 BRANCH="<branch>"
 
+if [ ! -d "$WORK_TREE" ]; then
+  echo "WORK_TREE folder does not exist. We cannot deploy!"
+  exit 1
+fi
+
 while read oldrev newrev ref
 do
   if [ "$ref" = "refs/heads/$BRANCH" ];
