@@ -1,7 +1,7 @@
 #!/bin/bash
 
 WORK_TREE="<work_tree>"
-GIT_DIR="<git_dir>"
+GIT_DIR="<git_dir>.git"
 BRANCH="<branch>"
 
 if [ ! -d "$WORK_TREE" ]; then
