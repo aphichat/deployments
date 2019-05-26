@@ -3,10 +3,10 @@
 # This script initialise the auto deployment process
 # It generate and add the bare repository and add the post-receive hook file to the bare repository
 
-REPOSITORY_PATH="/srv/users/$(whoami)/apps/repositories"
+REPOSITORY_PATH=$6
 POST_RECEIVE_PATH="$REPOSITORY_PATH/$2.git/hooks"
 
-if [ $1 = "-repository" ] && [ $3 = "-branch" ]; then
+if [ $1 = "-repository" ] && [ $3 = "-branch" ] && [ $5 = "-path" ]; then
   if [ ! -d "$REPOSITORY_PATH/$2.git" ]; then
     echo "REPOSITORY_PATH = $REPOSITORY_PATH"
     # initiate --bare repo
