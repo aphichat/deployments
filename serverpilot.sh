@@ -27,7 +27,7 @@ if [ $1 = "-git_dir" ] && [ $3 = "-branch" ] && [ $5 = "-path" ] && [ $7 = "-rep
     echo "Make sure <user> can excecute the post-receive file"
     chmod +x $POST_RECEIVE_PATH/post-receive
   else
-    echo "Error, the --bare repository allready exist."
+    echo "The --bare repository $GIT_DIR.git already exist."
   fi
 else
   echo "Error..."
