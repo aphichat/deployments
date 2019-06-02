@@ -20,10 +20,14 @@ do
   fi
 done
 
-# symlink public folder
-echo "Symlink public folder..."
-ln -s $WORK_TREE/web $WORK_TREE/public
+# # symlink public folder
+# echo "Symlink public folder..."
+# ln -s $WORK_TREE/web $WORK_TREE/public
 
-# install vendors
-echo "Install Composer"
-cd $WORK_TREE && composer install
+# # install vendors
+# echo "Install Composer"
+# cd $WORK_TREE && composer install
+
+echo "Run post deployment script"
+## extra
+## eof_extra
